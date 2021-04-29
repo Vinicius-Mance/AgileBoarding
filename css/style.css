@@ -1,9 +1,17 @@
-body {
+#pagPrincipal {
   background-image: url(../img/fundoPrincipal.jpg);
   background-size: auto;
   background-repeat: no-repeat;
   background-color: rgba(0,0,0,0.5);
   background-blend-mode: overlay;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+#pagLerMaisSobre{
+  
 }
 
 #logoBrancoPagPrincipal {
@@ -32,6 +40,13 @@ body {
   height: 50px;
   font-size: 1.2rem;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+#botaoAbrirConta:active,#botaoAbrirConta:hover{
+  background-color: #fff;
+  border: solid 3px var(--blue-theme);
+  color: var(--blue-theme);
 }
 
 #botaoJaTenhoConta {
@@ -43,6 +58,13 @@ body {
   height: 50px;
   font-size: 1.2rem;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+#botaoJaTenhoConta:active,#botaoJaTenhoConta:hover{
+  background-color: var(--blue-theme);
+  border: none;
+  color: #fff;
 }
 
 #lerMaisSobre {
