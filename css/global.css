@@ -6,6 +6,7 @@
 	font: inherit;
 	vertical-align: baseline;
 	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
 }
 
 *:focus {
