@@ -41,6 +41,7 @@ a {
 button {
 	cursor: pointer;
 }
+
 :root {
     --light-gray: #F5F7FA;
     --light-black: #737D8C;

@@ -19,9 +19,14 @@ body{
   height: 100vh;
   position: absolute;
   top: 100vh;
+  background-color: var(--light-gray);
 }
 
-#logoBrancoPagPrincipal {
+#ancoraAbrirLerMaisSobre{
+  display: hidden;
+}
+
+.logoPagina {
   width: 80%;
   display: block;
   margin: 5% auto 5% auto;
@@ -89,6 +94,49 @@ body{
 	animation: flutuar 2s ease-in-out infinite;
 }
 
+#pagLerMaisSobre h1 {
+  color: var(--blue-theme);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 80%;
+  margin: 5% auto 5% auto;
+}
+
+#pagLerMaisSobre p {
+  text-align: left;
+  width: 80%;
+  margin: 5% auto 5% auto;
+}
+
+#pagLerMaisSobre a {
+  display: block;
+  text-align: center;
+  width: 80%;
+  max-height: 50px;
+  padding: 10px 0;
+  color: var(--blue-theme);
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 30px;
+  border: solid 3px var(--blue-theme);
+  border-radius: 5px;
+  left: 10%;
+  right: 10%;
+  transition: 0.2s;
+}
+
+#pagLerMaisSobre a:active,#pagLerMaisSobre a:hover {
+  color: #fff;
+  background-color: var(--blue-theme);
+  border: none;
+}
+
+#bannerlerMais {
+  width: 100%;
+}
+
 @keyframes flutuar {
 	0% {
 		transform: translatey(0px);
@@ -99,8 +147,4 @@ body{
 	100% {
 		transform: translatey(0px);
 	}
-}
-
-#ancoraAbrirLerMaisSobre{
-  display: hidden;
 }
