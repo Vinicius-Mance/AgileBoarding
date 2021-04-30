@@ -49,4 +49,4 @@ const testarCpf = () => {
   }
 }
 
-document.getElementById('botaoCpf').onclick = function() {testarCpf();}
+document.getElementById('botaoCpf').onclick = function(e){e.preventDefault(); testarCpf();}
