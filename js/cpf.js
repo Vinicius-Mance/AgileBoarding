@@ -61,15 +61,18 @@ document.addEventListener('click', function(e) {
 
   if (!cliqueDentro && testarCpf() == false) {
     erroCpf.innerHTML = "Insira um CPF válido";
-    console.log("a");
   } else {
     erroCpf.innerHTML  = "";
-    console.log("b");
   }
 
 });
 
 document.getElementById('botaoCpf').onclick = function(e){
-  e.preventDefault();
+
+  if (!testarCpf()) {
+    e.preventDefault();
+  }
+
   console.log(testarCpf());
+
 }
