@@ -2,21 +2,23 @@ const testarCpf = () => {
   let soma = 0;
   let resto;
   let cpf = document.getElementById('campoCpf').value;
-  if (cpf == "00000000000" ||
+
+  if (!cpf ||
+      cpf.length != 11 ||
+      cpf == "00000000000" ||
       cpf == "11111111111" ||
       cpf == "22222222222" ||
       cpf == "33333333333" ||
       cpf == "44444444444" ||
       cpf == "55555555555" ||
       cpf == "66666666666" ||
-      cpf =="77777777777" ||
+      cpf == "77777777777" ||
       cpf == "88888888888" ||
-      cpf == "99999999999"
-      ) {
-    return false;
+      cpf == "99999999999") {
+      return false;
   }
 
-  for (i=1; i<=9; i++) {
+  for (var i = 1; i <= 9; i++) {
     soma = soma + parseInt(cpf.substring(i-1, i)) * (11 - i);
     resto = (soma * 10) % 11;
   }
@@ -25,28 +27,27 @@ const testarCpf = () => {
     resto = 0;
   }
 
-  if (resto != parseInt(cpf.substring(9, 10)) ){
-    return false;
+  if (resto != parseInt(cpf.substring(9, 10)) ) {
+      return false;
   }
 
   soma = 0;
 
-  for (i = 1; i <= 10; i++){
+  for (var i = 1; i <= 10; i++){
     soma = soma + parseInt(cpf.substring(i-1, i)) * (12 - i);
     resto = (soma * 10) % 11;
   }
 
-  if ((resto == 10) || (resto == 11)){
+  if (resto == 10 || resto == 11){
     resto = 0;
   }
 
-  if (resto != parseInt(cpf.substring(10, 11))){
-    console.log(false);
-    return false;
-  } else {
-    console.log(true);
-    return true;
+  if (resto != parseInt(cpf.substring(10, 11) ) ){
+      return false
+    } else {
+      return true
   }
+
 }
 
-document.getElementById('botaoCpf').onclick = function(e){e.preventDefault(); testarCpf();}
+document.getElementById('botaoCpf').onclick = function(e){e.preventDefault(); console.log(testarCpf());}
