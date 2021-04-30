@@ -1,7 +1,10 @@
+let campoCpf = document.getElementById('campoCpf');
+let erroCpf = document.getElementById('erroCpf');
+
 const testarCpf = () => {
   let soma = 0;
   let resto;
-  let cpf = document.getElementById('campoCpf').value;
+  let cpf = campoCpf.value;
 
   if (!cpf ||
       cpf.length != 11 ||
@@ -27,27 +30,46 @@ const testarCpf = () => {
     resto = 0;
   }
 
-  if (resto != parseInt(cpf.substring(9, 10)) ) {
-      return false;
+  if (resto != parseInt(cpf.substring(9, 10))) {
+    return false;
   }
 
   soma = 0;
 
-  for (var i = 1; i <= 10; i++){
+  for (var i = 1; i <= 10; i++) {
     soma = soma + parseInt(cpf.substring(i-1, i)) * (12 - i);
     resto = (soma * 10) % 11;
   }
 
-  if (resto == 10 || resto == 11){
+  if (resto == 10 || resto == 11) {
     resto = 0;
   }
 
-  if (resto != parseInt(cpf.substring(10, 11) ) ){
-      return false
-    } else {
-      return true
+  if (resto == parseInt(cpf.substring(10, 11))) {
+    return true;
+  } else {
+    return false;
   }
 
 }
 
-document.getElementById('botaoCpf').onclick = function(e){e.preventDefault(); console.log(testarCpf());}
+document.addEventListener('click', function(e) {
+
+  testarCpf();
+
+  let cliqueDentro = campoCpf.contains(event.target);
+
+  if (!cliqueDentro && testarCpf() == false) {
+    erroCpf.innerHTML = "Insira um CPF válido";
+    console.log("a");
+  } else {
+    erroCpf.innerHTML  = "";
+    console.log("b");
+  }
+
+});
+
+document.getElementById('botaoCpf').onclick = function(e){
+  e.preventDefault();
+  console.log(testarCpf());
+}

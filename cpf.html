@@ -10,10 +10,11 @@
 
   <body>
 
-    <form method="post">
+    <form action="cpf.html" id="formularioCpf" method="post">
       <div class="campos">
         <label for="campoCpf">Qual é o seu CPF?</label>
         <span>CPF</span>
+        <span class="erro" id="erroCpf"></span>
         <input type="text" id="campoCpf" name="campoCpf" placeholder="123.456.789-09">
       </div>
       <button type="submit" id="botaoCpf" name="button">Avançar</button>
