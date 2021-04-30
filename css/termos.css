@@ -1,0 +1,89 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container ol {
+  width: 80%;
+  counter-reset: item;
+  margin: 5% auto 5% auto;
+}
+
+.container li {
+  width: 100%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  display: block;
+}
+
+.container li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  font-weight: bold;
+}
+
+.container h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 5% auto 5% auto;
+}
+
+.logoPagina {
+  width: 80%;
+  display: block;
+  margin: 5% auto 5% auto;
+}
+
+.containerAceitarRecusar {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  display: block;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.botoesAceitarRecusar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#botaoAceitarTermos {
+  background-color: var(--blue-theme);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 40%;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.2s;
+  z-index: 20;
+}
+
+#botaoRecusarTermos {
+  background-color: #fff;
+  color: var(--blue-theme);
+  border: none;
+  border: solid 3px var(--blue-theme);
+  border-radius: 5px;
+  width: 40%;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.2s;
+  z-index: 20;
+}
