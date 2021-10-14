@@ -11,13 +11,13 @@
 
   <body>
 
-    <form action="nome.html" id="formularioCpf" method="post">
+    <form action="nome.html" id="formularioNome" method="post">
       <div class="campos">
         <label for="campoNome">Qual é o seu Nome?</label>
         <span>Nome</span>
         <span class="erro" id="erroNome"></span>
 
-        <input required type="text" id="campoNome" name="campoNome" placeholder="Seu nome">
+        <input required type="text" id="campoNome" name="campoNome" placeholder="Seu nome" pattern="[a-zA-Z0-9\s]+">
       </div>
       <button type="submit" id="botaoNome" name="button">Avançar</button>
     </form>
