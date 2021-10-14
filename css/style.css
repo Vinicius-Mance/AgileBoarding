@@ -3,10 +3,9 @@ body{
 }
 
 #pagPrincipal {
-  background-image: url(../img/fundoPrincipal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--light-gray);
   background-blend-mode: overlay;
   width: 100%;
   height: 100vh;
@@ -43,7 +42,7 @@ body{
   right: 10%;
 }
 
-#botaoAbrirConta {
+#botaoAbrirConta,#botaoJaTenhoConta {
   background-color: var(--blue-theme);
   color: #fff;
   border: none;
@@ -55,32 +54,14 @@ body{
   transition: 0.2s;
 }
 
-#botaoAbrirConta:active,#botaoAbrirConta:hover{
+#botaoAbrirConta:active,#botaoAbrirConta:hover,#botaoJaTenhoConta:active,#botaoJaTenhoConta:hover{
   background-color: #fff;
   border: solid 3px var(--blue-theme);
   color: var(--blue-theme);
-}
-
-#botaoJaTenhoConta {
-  color: var(--blue-theme);
-  background-color: #fff;
-  border: solid 3px var(--blue-theme);
-  border-radius: 5px;
-  width: 100%;
-  height: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: 0.2s;
-}
-
-#botaoJaTenhoConta:active,#botaoJaTenhoConta:hover{
-  background-color: var(--blue-theme);
-  border: none;
-  color: #fff;
 }
 
 #lerMaisSobre {
-  color: #fff;
+  color: #0068ff;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
@@ -90,7 +71,7 @@ body{
 #setaLerMaisSobre{
   width: 4rem;
   height: 4rem;
-	transform: translatey(0px);
+  transform: translateY(50deg);
 	animation: flutuar 2s ease-in-out infinite;
 }
 

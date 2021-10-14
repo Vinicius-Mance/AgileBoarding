@@ -75,10 +75,9 @@ body {
 }
 
 #botaoRecusarTermos {
-  background-color: #fff;
-  color: var(--blue-theme);
+  background-color: var(--blue-theme);
+  color: #fff;
   border: none;
-  border: solid 3px var(--blue-theme);
   border-radius: 5px;
   width: 40%;
   height: 50px;
