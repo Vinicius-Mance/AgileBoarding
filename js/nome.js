@@ -1,7 +1,8 @@
 let campoNome = document.getElementById('campoNome');
 let erroNome = document.getElementById('erroNome');
 
-campoNome.onkeyup = function(e){
+campoNome.onkeyup = function () {
+campoNome.value =  campoNome.value.replace(/\d+/g, '').replace(/[^\w\s]/gi, '');
   erroNome.innerHTML = "";
 }
 
