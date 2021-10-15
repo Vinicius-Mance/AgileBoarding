@@ -4,7 +4,7 @@ let erroCpf = document.getElementById('erroCpf');
 const testarCpf = () => {
   let soma = 0;
   let resto;
-  let cpf = campoCpf.value;
+  let cpf = campoCpf.value.replace(/\D+/g, '');
 
   if (!cpf ||
       cpf.length != 11 ||
@@ -66,6 +66,27 @@ document.addEventListener('click', function(e) {
   }
 
 });
+
+campoCpf.onkeyup = function(){
+  mascaraCpf();
+}
+
+  function mascaraCpf() {
+
+    if (campoCpf.value.length == 0) {
+      erroCpf.innerHTML = "Insira um CPF válido";
+    } else {
+      erroCpf.innerHTML = "";
+    }
+
+    campoCpf.value = campoCpf.value
+      .replace(/\D+/g, '')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1');
+
+  }
 
 document.getElementById('botaoCpf').onclick = function(e){
 
